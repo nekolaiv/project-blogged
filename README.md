@@ -33,4 +33,4 @@ This project is in the alpha stage. Features are incomplete and may change. Your
 Contributions are welcome! Feel free to fork the repository and submit pull requests.
 
 ## License
-This project is licensed under the MIT License.
+This project is licensed under the [MIT License](LICENSE).
