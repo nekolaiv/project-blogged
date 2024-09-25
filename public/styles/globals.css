@@ -1,0 +1,136 @@
+*,*::before,*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: monospace;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    color: black;
+}
+
+/* ===HEADER=== */
+header{
+    width: 100%;
+    height: 50px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #121212;
+}
+
+p a{
+    text-decoration: none;
+    color: white;
+}
+
+.menu-toggle {
+    display: block;
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.menu-icon::before {
+    content: '\2630';
+    /* Unicode for hamburger icon */
+}
+
+.nav-menu{
+    display: none;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    right: 0;
+    background-color: #333;
+    padding: 10px;
+}
+
+.nav-menu.active{
+    display: block;
+}
+
+header nav ul{
+    display: flex;
+    align-items: end; 
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+header nav ul li{
+    list-style: none;
+    margin: 10px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+#call-to-action-button{
+    height: 25px;
+    width: 85px;
+    margin: 10px;
+    background-color: #121212;
+    border: 1px solid white
+}
+
+#call-to-action-button:hover{
+    filter: invert(100%);
+}
+
+#call-to-action-button a{
+    text-decoration: none;
+    color: white;
+}
+
+
+
+@media (min-width: 768px){
+    .menu-toggle{
+        display: none;
+    }
+
+    .nav-menu{
+        width: 50%;
+        padding: 0;
+        display: initial;
+        position: static;
+        background-color: #121212;
+    }
+
+    header nav ul{
+        flex-direction: row;
+        align-items: center;
+        justify-content: end;
+    }
+
+    header nav ul li{
+        margin: 15px;
+    }
+
+    #call-to-action-button{
+        margin: 10px 0px 10px 15px;
+    }
+}
+
+/* ===MAIN=== */
+
+/* ===FOOTER=== */
+
+
+/* ===OTHERS=== */
+.error {
+    color: red;
+    font-size: 0.9em;
+}

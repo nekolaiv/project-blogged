@@ -1,0 +1,145 @@
+body{
+    justify-content: center;
+
+}
+
+
+
+/* ===FORM SECTION=== */
+
+.form-section{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #121212;
+    color: white;
+}
+
+#form-logo{
+    margin: 40px 0;
+    font-size: 25px;
+}
+
+
+form{
+    width: 80%;
+    height: 90%;
+}
+
+.form-description{
+    margin: 20px 0;
+    font-size: 15px;
+}
+
+
+/* ===INPUTS=== */
+
+input[type="text"],
+input[type="password"],
+input[type="email"] {
+    width: 100%;
+    height: 40px;
+    margin: 10px 10px 10px 0;
+    padding: 10px;
+    background-color: black;
+    color: white;
+    border: 1px solid grey;
+}
+
+#forgot-password{
+    margin: -18px 0 15px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+#forgot-password a{
+    font-size:12px;
+    text-decoration: underline;
+    color: rgb(165, 165, 165);
+}
+
+input[type=submit]{
+    width: 100%;
+    height: 40px;
+    margin: 10px 0;
+    background-color: white;
+    border: 1px solid black;
+    color: black;
+}
+input[type=submit]:hover{
+    filter: invert(80%);
+
+}
+
+#or-separator{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5px 10px;
+    color: grey;
+}
+
+hr{
+    width: 100%;
+    height: 100%;
+    margin: 1px;
+    border: none;
+    border-top: 0.5px solid grey;
+}
+
+.form-switch-button{
+    width: 100%;
+    height: 40px;
+    margin: 10px 0;
+    background-color: black;
+    border: 1px solid grey;
+}
+
+.form-switch-button a{
+    text-decoration: none;
+    color: white;
+}
+
+.form-switch-button:hover{
+    filter: invert(80%);
+}
+
+
+/* ===DESIGN SECTION=== */
+
+.design-section{
+    width: 60vw;
+    height: 100vh;
+    display: none;
+    background-image: url("../../assets/pictures/coding1.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+/* ===MEDIA QUERIES=== */
+
+@media (min-width: 1024px) {
+
+    body{
+        flex-direction: row;
+    }
+
+    .form-section{
+        width: 40vw;
+    }
+
+    form{
+        width: 60%;
+        height: 60%;
+    }
+
+    .design-section{
+        display: block;
+    }
+}
