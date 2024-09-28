@@ -3,17 +3,33 @@
 require_once '../config/database.php';
 
 class User {
+    protected $db;
+
+    function __construct(){
+        $this->db = new Database();
+    }
+
     public static function findByEmail($email) {
-        global $pdo;
-        $stmt = $pdo->prepare('SELECT * FROM users WHERE email = ?');
-        $stmt->execute([$email]);
-        return $stmt->fetch(PDO::FETCH_ASSOC);
+        $sql = "SELECT * FROM users WHERE email = :email";
+        $query = $this->db->connect()->prepare($sql);
+        $query->bindParam(':email', $email);
+        $data=null;
+        if($query->execute()){
+            $data = $query->fetchAll();
+        }
+        return $data;
     }
 
     public static function create($email, $password) {
-        global $pdo;
-        $stmt = $pdo->prepare('INSERT INTO users (email, password) VALUES (?, ?)');
-        $stmt->execute([$email, $password]);
+        $sql = "INSERT INTO users(email, password) VALUES (:email, :password)";
+        $query = $this->db->connect()->prepare($sql);
+        $query->bindParam(':email', $email);
+        $query->bindParam(':password', $password);
+        if($query->execute()){
+            return true;
+        } else {
+            return false;
+        }
     }
 }
 ?>
