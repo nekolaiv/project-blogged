@@ -18,9 +18,9 @@
     $database = new Database();
 
     // Get the PDO connection
-    $pdo = $database->getConnection();
+    $pdo = $database->connect();
     
-    require_once '../../classes/UserRegistration.php';
+    require_once '../../classes/registration.class.php';
 
     $userRegistration = new UserRegistration($pdo);
     $userRegistration->handleRequest();
