@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign Up</title>
-    <link rel="stylesheet" href="../../public/styles/globals.css">
-    <link rel="stylesheet" href="../../public/styles/forms.css">
+    <link rel="stylesheet" href="../../../public/assets/styles/globals.css">
+    <link rel="stylesheet" href="../../../public/assets/styles/forms.css">
 </head>
 <body>
     <?php
