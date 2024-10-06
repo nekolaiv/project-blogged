@@ -1,0 +1,14 @@
+{
+  "name": "project-blog",
+  "version": "1.0.0",
+  "description": "## Description A simple blog application built with PHP, currently in alpha development. This project serves as a practice platform for learning PHP and web development.",
+  "main": "index.php",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "tailwindcss": "^3.4.13"
+  }
+}
