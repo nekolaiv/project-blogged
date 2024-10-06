@@ -4,11 +4,15 @@
   "description": "## Description A simple blog application built with PHP, currently in alpha development. This project serves as a practice platform for learning PHP and web development.",
   "main": "index.php",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "tailwindcss -i ./public/assets/styles/input.css -o ./public/assets/styles/output.css --watch"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "tailwindcss": "^3.4.13"
+  },
+  "dependencies": {
+    "flowbite": "^2.5.2"
   }
 }
